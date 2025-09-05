@@ -29,7 +29,7 @@ int main(){
 	
 	//Ahora utilizaremos el metodo bubble sort para ordenarlo de menor a mayor
 	
-	for(int i = 0; i < max; i++){
+	for(int i = 0; i < max - 1; i++){
 		for(int j = 0; j < max - i - 1; j++){
 			if(myarray[j] > myarray[j + 1]){
 			int temp = myarray[j];
