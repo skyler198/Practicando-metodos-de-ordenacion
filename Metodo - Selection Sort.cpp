@@ -28,4 +28,33 @@ int main(){
 	
 	cout << "\n---- Ordeando..." << endl;
 	
+//Ahora llamaremos a la funcion selectionSort para ordenarlo de menor a mayor
+	
+	selectionSort(array, n);
+
+    cout << "\nEste es tu arreglo ordenado: [";
+    for (int i = 0; i < n; i++) {
+        cout << array[i];
+        if (i < n - 1) cout << ", ";
+    }
+    cout << "]" << endl;
+	
+	return 0;
+}
+
+void selectionSort(int array[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int min = i;
+        for (int j = i + 1; j < n; j++) {
+            if (array[j] < array[min]) {
+                min = j;
+            }
+        }
+        
+        if (min != i) {
+            int temp = array[min];
+            array[min] = array[i];
+            array[i] = temp;
+        }
+    }
 }
